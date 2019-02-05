@@ -4,7 +4,7 @@ module.exports = {
     description: `The Women's Issue, An Art & Literary Magazine`,
     author: `Marie Konopacki`,
   },
-  pathPrefix: "/reponame",
+  pathPrefix: "/womensissue",
   plugins: [
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
