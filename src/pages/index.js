@@ -1,0 +1,282 @@
+import React from 'react'
+import _ from 'lodash'
+
+import Layout from '../components/layout'
+import Piecepreviewrow from '../components/piecepreviewrow'
+import Artpreviewinfo from '../components/artpreviewrow'
+import Artpiece from '../components/artpiece'
+import Piecepreview from '../components/piecepreview'
+import Circlebutton from '../components/circlebutton'
+import Featuredrow from '../components/featuredrow'
+import Featuredcolumn from '../components/featuredcolumn'
+import Shorten from '../components/shorten'
+import Shortenfeatured from '../components/shortenfeatured'
+import SEO from '../components/seo'
+import Featuredpiece from '../components/featuredpiece'
+import Img from 'gatsby-image'
+
+
+export default ({data }) => {
+  const featuredSample = _.sampleSize(data.all.edges, 3)
+  const artSample = _.sampleSize(data.art.edges, 4)
+
+  return (
+    <Layout>
+      <SEO title="Home" keywords={[`literary`, `art`, `magazine`]} />
+
+      <h4>Featured</h4>
+      <Featuredrow>
+        {featuredSample.map(post => (
+          <Featuredcolumn>
+            <a href={post.node.frontmatter.path}>
+              <div key={post.node.id}>
+                <h3>{post.node.frontmatter.title}</h3>
+                <small>
+                  {post.node.frontmatter.type} by {post.node.frontmatter.author}
+                </small>
+                <br />
+              </div>
+            </a>
+          </Featuredcolumn>
+        ))
+        }
+      </Featuredrow>
+
+      <Featuredpiece>
+          <div class="item-1" href={featuredSample[0].node.frontmatter.path}>
+            <a class="featuredLink" href={featuredSample[0].node.frontmatter.path}>
+              <div class="featuredImage"></div>
+              <div class="featuredInfo">
+                <h2>{featuredSample[0].node.frontmatter.title}</h2>
+                <small>
+                  {featuredSample[0].node.frontmatter.type} by {featuredSample[0].node.frontmatter.author}
+                </small>
+                <Shortenfeatured>
+                  {featuredSample[0].node.excerpt}
+                </Shortenfeatured>
+              </div>
+            </a>
+          </div>
+        <div class="item-2">
+          <a class="featuredLink" href={featuredSample[1].node.frontmatter.path}>
+            <div class="featuredImage"></div>
+            <div class="featuredInfo">
+              <h2>{featuredSample[1].node.frontmatter.title}</h2>
+              <small>
+                {featuredSample[1].node.frontmatter.type} by {featuredSample[1].node.frontmatter.author}
+              </small>
+              <Shortenfeatured>
+                {featuredSample[0].node.excerpt}
+              </Shortenfeatured>
+            </div>
+          </a>
+        </div>
+        <div class="item-3">
+          <a class="featuredLink" href={featuredSample[2].node.frontmatter.path}>
+            <div class="featuredImage"></div>
+            <div class="featuredInfo">
+              <h2>{featuredSample[2].node.frontmatter.title}</h2>
+              <small>
+                {featuredSample[2].node.frontmatter.type} by {featuredSample[2].node.frontmatter.author}
+              </small>
+              <Shortenfeatured>
+                {featuredSample[0].node.excerpt}
+              </Shortenfeatured>
+            </div>
+          </a>
+        </div>
+      </Featuredpiece>
+
+
+
+      <h4>Explore all</h4>
+      <Piecepreviewrow>
+        {_.sampleSize(data.fiction.edges, 3).map(post => (
+          <a href={post.node.frontmatter.path}>
+          <Piecepreview>
+            <div key={post.node.id}>
+              <h3>{post.node.frontmatter.title}</h3>
+              <small>
+                {post.node.frontmatter.type} by {post.node.frontmatter.author}
+              </small>
+              <Shorten>
+                {post.node.excerpt}
+              </Shorten>
+              <br />
+              <div class="fadetowhite"></div>
+              <Circlebutton> <small> Read more </small> </Circlebutton>
+            </div>
+          </Piecepreview>
+          </a>
+        ))}
+        <a href="/fiction"><h4 class="seemore">See more fiction </h4></a>
+      </Piecepreviewrow>
+
+      <div class="artRow">
+
+        <div class="artSelection">
+          <Artpreviewinfo>
+            {artSample.map(post => (
+                <div class="artTitleArtist" key={post.node.id}>
+                  <h3>{post.node.frontmatter.title}</h3>
+                  <small>
+                    {post.node.frontmatter.type} by {post.node.frontmatter.author}
+                  </small>
+                </div>
+            ))
+            }
+          </Artpreviewinfo>
+          </div>
+
+          <div class="rightmostArt">
+            <Artpiece>
+              <div class="artitem-1">
+                <div class="artDisplay"><img src={artSample[0].node.frontmatter.source.childImageSharp.sizes.src} /></div>
+              </div>
+              <div class="artitem-2">
+                <div class="artDisplay"><img src={artSample[0].node.frontmatter.source.childImageSharp.sizes.src} /></div>
+              </div>
+              <div class="artitem-3">
+                <div class="artDisplay"><img src={artSample[0].node.frontmatter.source.childImageSharp.sizes.src} /></div>
+              </div>
+              <div class="artitem-4">
+                <div class="artDisplay"><img src={artSample[0].node.frontmatter.source.childImageSharp.sizes.src} /></div>
+              </div>
+            </Artpiece>
+          </div>
+    </div>
+    <a href="/art"><h4 class="seemore">See more art</h4></a>
+
+
+
+      <Piecepreviewrow>
+        {_.sampleSize(data.personalessay.edges, 3).map(post => (
+          <a href={post.node.frontmatter.path}>
+          <Piecepreview>
+            <div key={post.node.id}>
+              <h3>{post.node.frontmatter.title}</h3>
+              <small>
+                {post.node.frontmatter.type} by {post.node.frontmatter.author}
+              </small>
+              <Shorten>
+                {post.node.excerpt}
+              </Shorten>
+              <br />
+              <div class="fadetowhite"></div>
+              <Circlebutton> <small> Read more </small> </Circlebutton>
+            </div>
+          </Piecepreview>
+          </a>
+        ))}
+        <a href="/personalessay"><h4 class="seemore">See more personal essays</h4></a>
+      </Piecepreviewrow>
+
+      <Piecepreviewrow>
+        {_.sampleSize(data.poetry.edges, 3).map(post => (
+          <a href={post.node.frontmatter.path}>
+          <Piecepreview>
+            <div key={post.node.id}>
+              <h3>{post.node.frontmatter.title}</h3>
+              <small>
+                {post.node.frontmatter.type} by {post.node.frontmatter.author}
+              </small>
+              <Shorten>
+                {post.node.excerpt}
+              </Shorten>
+              <br />
+              <div class="fadetowhite"></div>
+              <Circlebutton> <small> Read more </small> </Circlebutton>
+            </div>
+          </Piecepreview>
+          </a>
+        ))}
+        <a href="/poetry"><h4 class="seemore">See more poetry</h4></a>
+      </Piecepreviewrow>
+
+    </Layout>
+  )
+}
+
+const path = require(`path`)
+
+
+export const pieceQuery = graphql`
+    query PieceIndexQuery {
+      all: allMarkdownRemark {
+        edges {
+          node {
+            id
+            frontmatter {
+              path
+              title
+              author
+              type
+            }
+            excerpt(pruneLength: 350)
+          }
+        }
+      }
+      fiction: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/fiction/"}}) {
+        edges {
+          node {
+            id
+            frontmatter {
+              path
+              title
+              author
+              type
+            }
+            excerpt
+          }
+        }
+      }
+      personalessay: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/personalessay/"}}) {
+        edges {
+          node {
+            id
+            frontmatter {
+              path
+              title
+              author
+              type
+            }
+            excerpt
+          }
+        }
+      }
+      poetry: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/poetry/"}}) {
+        edges {
+          node {
+            id
+            frontmatter {
+              path
+              title
+              author
+              type
+            }
+            excerpt
+          }
+        }
+      }
+      art: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/art/"}}) {
+        edges {
+          node {
+            id
+            frontmatter {
+              path
+              source {
+                childImageSharp{
+                  sizes(maxWidth: 630) {
+                      src
+                  }
+                }
+              }
+              title
+              author
+              type
+            }
+          }
+        }
+      }
+    }
+`
