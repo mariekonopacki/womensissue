@@ -1,6 +1,6 @@
 ---
 path: "/kissing-hand"
-source: "./piano4.jpg"
+source: "./artimages/kissinghand.jpg"
 title: "Kissing Hand"
 author: "Serena Eggers"
 type: "Art"

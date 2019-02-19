@@ -5,7 +5,6 @@ import Layout from '../components/layout'
 import Piecepreviewrow from '../components/piecepreviewrow'
 import Artpreviewinfo from '../components/artpreviewrow'
 import Artpiece from '../components/artpiece'
-import Piecepreview from '../components/piecepreview'
 import Circlebutton from '../components/circlebutton'
 import Featuredrow from '../components/featuredrow'
 import Featuredcolumn from '../components/featuredcolumn'
@@ -25,7 +24,7 @@ export default ({data }) => {
       <SEO title="Home" keywords={[`literary`, `art`, `magazine`]} />
 
       <h4>Featured</h4>
-      <Featuredrow>
+      <div class="featuredrow">
         {featuredSample.map(post => (
           <Featuredcolumn>
             <a href={post.node.frontmatter.path}>
@@ -40,9 +39,9 @@ export default ({data }) => {
           </Featuredcolumn>
         ))
         }
-      </Featuredrow>
+      </div>
 
-      <Featuredpiece>
+      <div class="featuredpiece">
           <div class="item-1" href={featuredSample[0].node.frontmatter.path}>
             <a class="featuredLink" href={featuredSample[0].node.frontmatter.path}>
               <div class="featuredImage"></div>
@@ -57,35 +56,35 @@ export default ({data }) => {
               </div>
             </a>
           </div>
-        <div class="item-2">
-          <a class="featuredLink" href={featuredSample[1].node.frontmatter.path}>
-            <div class="featuredImage"></div>
-            <div class="featuredInfo">
-              <h2>{featuredSample[1].node.frontmatter.title}</h2>
-              <small>
-                {featuredSample[1].node.frontmatter.type} by {featuredSample[1].node.frontmatter.author}
-              </small>
-              <Shortenfeatured>
-                {featuredSample[0].node.excerpt}
-              </Shortenfeatured>
-            </div>
-          </a>
-        </div>
-        <div class="item-3">
-          <a class="featuredLink" href={featuredSample[2].node.frontmatter.path}>
-            <div class="featuredImage"></div>
-            <div class="featuredInfo">
-              <h2>{featuredSample[2].node.frontmatter.title}</h2>
-              <small>
-                {featuredSample[2].node.frontmatter.type} by {featuredSample[2].node.frontmatter.author}
-              </small>
-              <Shortenfeatured>
-                {featuredSample[0].node.excerpt}
-              </Shortenfeatured>
-            </div>
-          </a>
-        </div>
-      </Featuredpiece>
+          <div class="item-2">
+            <a class="featuredLink" href={featuredSample[1].node.frontmatter.path}>
+              <div class="featuredImage"></div>
+              <div class="featuredInfo">
+                <h2>{featuredSample[1].node.frontmatter.title}</h2>
+                <small>
+                  {featuredSample[1].node.frontmatter.type} by {featuredSample[1].node.frontmatter.author}
+                </small>
+                <Shortenfeatured>
+                  {featuredSample[0].node.excerpt}
+                </Shortenfeatured>
+              </div>
+            </a>
+          </div>
+          <div class="item-3">
+            <a class="featuredLink" href={featuredSample[2].node.frontmatter.path}>
+              <div class="featuredImage"></div>
+              <div class="featuredInfo">
+                <h2>{featuredSample[2].node.frontmatter.title}</h2>
+                <small>
+                  {featuredSample[2].node.frontmatter.type} by {featuredSample[2].node.frontmatter.author}
+                </small>
+                <Shortenfeatured>
+                  {featuredSample[0].node.excerpt}
+                </Shortenfeatured>
+              </div>
+            </a>
+          </div>
+      </div>
 
 
 
@@ -93,20 +92,22 @@ export default ({data }) => {
       <Piecepreviewrow>
         {_.sampleSize(data.fiction.edges, 3).map(post => (
           <a href={post.node.frontmatter.path}>
-          <Piecepreview>
-            <div key={post.node.id}>
-              <h3>{post.node.frontmatter.title}</h3>
-              <small>
-                {post.node.frontmatter.type} by {post.node.frontmatter.author}
-              </small>
-              <Shorten>
-                {post.node.excerpt}
-              </Shorten>
-              <br />
-              <div class="fadetowhite"></div>
-              <Circlebutton> <small> Read more </small> </Circlebutton>
+            <div class="piecepreviewcolumn">
+              <div class="piecepreview fictionpreview">
+                <div key={post.node.id}>
+                  <h3>{post.node.frontmatter.title}</h3>
+                  <small>
+                    {post.node.frontmatter.type} by {post.node.frontmatter.author}
+                  </small>
+                  <Shorten>
+                    {post.node.excerpt}
+                  </Shorten>
+                  <br />
+                  <div class="fadetowhite"></div>
+                  <Circlebutton> <small> Read more </small> </Circlebutton>
+                </div>
+              </div>
             </div>
-          </Piecepreview>
           </a>
         ))}
         <a href="/fiction"><h4 class="seemore">See more fiction </h4></a>
@@ -115,32 +116,42 @@ export default ({data }) => {
       <div class="artRow">
 
         <div class="artSelection">
-          <Artpreviewinfo>
+          <div class="artpreviewrow">
             {artSample.map(post => (
-                <div class="artTitleArtist" key={post.node.id}>
-                  <h3>{post.node.frontmatter.title}</h3>
-                  <small>
-                    {post.node.frontmatter.type} by {post.node.frontmatter.author}
-                  </small>
-                </div>
+                <a href={post.node.frontmatter.path}>
+                  <div class="artTitleArtist" key={post.node.id}>
+                    <h3>{post.node.frontmatter.title}</h3>
+                    <small>
+                      {post.node.frontmatter.type} by {post.node.frontmatter.author}
+                    </small>
+                  </div>
+                </a>
             ))
             }
-          </Artpreviewinfo>
+          </div>
           </div>
 
           <div class="rightmostArt">
             <Artpiece>
               <div class="artitem-1">
-                <div class="artDisplay"><img src={artSample[0].node.frontmatter.source.childImageSharp.sizes.src} /></div>
+                <a href={artSample[0].node.frontmatter.path}>
+                  <div class="artDisplay"><img src={artSample[0].node.frontmatter.source.childImageSharp.sizes.src} /></div>
+                </a>
               </div>
               <div class="artitem-2">
-                <div class="artDisplay"><img src={artSample[0].node.frontmatter.source.childImageSharp.sizes.src} /></div>
+                <a href={artSample[1].node.frontmatter.path}>
+                  <div class="artDisplay"><img src={artSample[1].node.frontmatter.source.childImageSharp.sizes.src} /></div>
+                </a>
               </div>
               <div class="artitem-3">
-                <div class="artDisplay"><img src={artSample[0].node.frontmatter.source.childImageSharp.sizes.src} /></div>
+                <a href={artSample[2].node.frontmatter.path}>
+                  <div class="artDisplay"><img src={artSample[2].node.frontmatter.source.childImageSharp.sizes.src} /></div>
+                </a>
               </div>
               <div class="artitem-4">
-                <div class="artDisplay"><img src={artSample[0].node.frontmatter.source.childImageSharp.sizes.src} /></div>
+                <a href={artSample[3].node.frontmatter.path}>
+                  <div class="artDisplay"><img src={artSample[3].node.frontmatter.source.childImageSharp.sizes.src} /></div>
+                </a>
               </div>
             </Artpiece>
           </div>
@@ -152,20 +163,22 @@ export default ({data }) => {
       <Piecepreviewrow>
         {_.sampleSize(data.personalessay.edges, 3).map(post => (
           <a href={post.node.frontmatter.path}>
-          <Piecepreview>
-            <div key={post.node.id}>
-              <h3>{post.node.frontmatter.title}</h3>
-              <small>
-                {post.node.frontmatter.type} by {post.node.frontmatter.author}
-              </small>
-              <Shorten>
-                {post.node.excerpt}
-              </Shorten>
-              <br />
-              <div class="fadetowhite"></div>
-              <Circlebutton> <small> Read more </small> </Circlebutton>
+          <div class="piecepreviewcolumn">
+            <div class="piecepreview essaypreview">
+              <div key={post.node.id}>
+                <h3>{post.node.frontmatter.title}</h3>
+                <small>
+                  {post.node.frontmatter.type} by {post.node.frontmatter.author}
+                </small>
+                <Shorten>
+                  {post.node.excerpt}
+                </Shorten>
+                <br />
+                <div class="fadetowhite"></div>
+                <Circlebutton> <small> Read more </small> </Circlebutton>
+              </div>
             </div>
-          </Piecepreview>
+          </div>
           </a>
         ))}
         <a href="/personalessay"><h4 class="seemore">See more personal essays</h4></a>
@@ -174,20 +187,22 @@ export default ({data }) => {
       <Piecepreviewrow>
         {_.sampleSize(data.poetry.edges, 3).map(post => (
           <a href={post.node.frontmatter.path}>
-          <Piecepreview>
-            <div key={post.node.id}>
-              <h3>{post.node.frontmatter.title}</h3>
-              <small>
-                {post.node.frontmatter.type} by {post.node.frontmatter.author}
-              </small>
-              <Shorten>
-                {post.node.excerpt}
-              </Shorten>
-              <br />
-              <div class="fadetowhite"></div>
-              <Circlebutton> <small> Read more </small> </Circlebutton>
+            <div class="piecepreviewcolumn">
+              <div class="piecepreview poetrypreview">
+                <div key={post.node.id}>
+                  <h3>{post.node.frontmatter.title}</h3>
+                  <small>
+                    {post.node.frontmatter.type} by {post.node.frontmatter.author}
+                  </small>
+                  <Shorten>
+                    {post.node.excerpt}
+                  </Shorten>
+                  <br />
+                  <div class="fadetowhite"></div>
+                  <Circlebutton> <small> Read more </small> </Circlebutton>
+                </div>
+              </div>
             </div>
-          </Piecepreview>
           </a>
         ))}
         <a href="/poetry"><h4 class="seemore">See more poetry</h4></a>

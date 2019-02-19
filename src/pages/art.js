@@ -12,7 +12,7 @@ export default ({data }) => {
 
 return (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title="Art" keywords={[`art`]} />
 
     <h4>Explore fiction</h4>
     <Piecepreviewrow>

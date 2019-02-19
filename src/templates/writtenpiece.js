@@ -11,15 +11,19 @@ import Email from '../images/email.png'
 import Facebook from '../images/facebook.png'
 import Twitter from '../images/twitter.png'
 
-
-
 export default function Template({ data }) {
   const post = data.markdownRemark
   const recommendedSample = _.sampleSize(data.all.edges, 3)
+  const facebookLink = "https://www.facebook.com/sharer/sharer.php?u=" + window.location
+  const twitterLink = "https://twitter.com/home?status=" + window.location
+  const emailLink = "mailto:?&subject=Read " + post.frontmatter.title + " from the Women's Issue" + "&body=" + window.location
+
+  console.log(facebookLink)
+  console.log(emailLink)
 
   return (
     <Layout>
-    <SEO title={post.frontmatter.title} keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title={post.frontmatter.title} />
 
     <div class="backHome">
       <a href="/">
@@ -27,24 +31,27 @@ export default function Template({ data }) {
       </a>
     </div>
     <div class="pieceBox">
+
       <div class="pieceInfo">
-        <div class="title">
-          <h2>{post.frontmatter.title}</h2>
-          <small>
-              {post.frontmatter.type} by {post.frontmatter.author}
-          </small>
-        </div>
-        <div class="pieceIcon"></div>
-        <div class="sharePiece">
-          <div class="shareCall">
+        <div class="stickyInfo">
+          <div class="title">
+            <h2>{post.frontmatter.title}</h2>
             <small>
-                Share this piece
+                {post.frontmatter.type} by {post.frontmatter.author}
             </small>
           </div>
-          <div class="shareButtons">
-            <img class="shareIcon" src={Twitter}></img>
-            <img class="shareIcon" src={Facebook}></img>
-            <img class="shareIcon" src={Email}></img>
+          <div class="pieceIcon"></div>
+          <div class="sharePiece">
+            <div class="shareCall">
+              <small>
+                  Share this piece
+              </small>
+            </div>
+            <div class="shareButtons">
+              <a href="https://twitter.com/home?status="><img class="shareIcon" src={Twitter}></img></a>
+              <a href="https://www.facebook.com/sharer/sharer.php?u="><img class="shareIcon" src={Facebook}></img></a>
+              <a href="https://www.facebook.com/sharer/sharer.php?u="><img class="shareIcon" src={Email}></img></a>
+            </div>
           </div>
         </div>
       </div>

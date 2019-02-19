@@ -1,6 +1,6 @@
 ---
 path: "/woman"
-source: "./piano2.jpg"
+source: "./artimages/woman.png"
 title: "Woman"
 author: "Mahlet Shiferaw"
 type: "Art"

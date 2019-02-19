@@ -1,6 +1,6 @@
 ---
 path: "/motherland"
-source: "./piano4.jpg"
+source: "./artimages/motherland.jpg"
 title: "motherland"
 author: "Jeanine Zheng"
 type: "Art"

@@ -1,6 +1,6 @@
 ---
 path: "/part-ways"
-source: "./piano2.jpg"
+source: "./artimages/partsways.jpg"
 title: "Part Ways"
 author: "Joy Miessi"
 type: "Art"

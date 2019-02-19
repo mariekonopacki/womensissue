@@ -702,7 +702,6 @@ pre tt:after {
 }
 
 
-
 .recommendedPieces {
   margin-top: 80px;
   margin-bottom: 60px;
@@ -714,6 +713,13 @@ pre tt:after {
   overflow: hidden;
   background-color: black;
   float: right;
+}
+
+.artDisplayText {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  z-index: 2;
 }
 
 .artInfo {
@@ -728,6 +734,7 @@ pre tt:after {
   animation-duration: 30s;
 	animation-timing-function: ease-in-out;
 	animation-iteration-count: infinite;
+  z-index: 1;
 }
 
 .artitem-1{
@@ -748,6 +755,13 @@ pre tt:after {
 .artitem-4{
   position: absolute;
 	animation-name: artanim-4;
+}
+
+.artitem-1,
+.artitem-2,
+.artitem-3,
+.artitem-4 img {
+  width: 100%;
 }
 
 @keyframes artanim-1 {
@@ -860,6 +874,12 @@ a:visited {
   width: 37%;
 }
 
+.stickyInfo {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 200px;
+}
+
 .title {
   font-size: 120%;
 }
@@ -869,6 +889,18 @@ a:visited {
   padding-left: 50px;
   padding-right: 30px;
   border-left: solid #d3d3d3 1px;
+}
+
+.pieceContent {
+  width: 63%;
+  padding-left: 50px;
+  padding-right: 30px;
+  border-left: solid #d3d3d3 1px;
+}
+
+.pieceArt {
+  padding-bottom: 40px;
+  margin-top: 20px;
 }
 
 .pieceIcon {
@@ -981,5 +1013,98 @@ a:visited {
   font-size: 16px;
   text-rendering: optimizeLegibility;
   transition: 0.3s;
+
+}
+
+.piecepreview {
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  margin: 25px;
+  height: 300px;
+  padding: 25px;
+  border-top: solid 3px #F7E490;
+  position: relative;
+  overflow: hidden;
+}
+
+.fictionpreview {
+  border-top: solid 3px #F7E490;
+}
+
+.essaypreview {
+  border-top: solid 3px #116062;
+}
+
+.poetrypreview {
+  border-top: solid 3px #f06058;
+}
+
+.piecepreviewcolumn {
+  float: left;
+  width: 33.33%;
+}
+
+.featuredrow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.featuredpiece {
+  height: 275px;
+  width: 920px;
+  margin: 20px;
+  margin-bottom: 90px;
+  margin-top: 50px;
+}
+
+.artpreviewrow {
+  display: block;
+  height: 375px;
+  float: left;
+  margin-top: 10px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .featuredrow {
+    display: none;
+  }
+
+  .featuredImage {
+    width: 100%;
+    height: 200px;
+    float: none;
+  }
+
+  .featuredInfo {
+    padding-left: 0px;
+    width: 100%;
+  }
+
+  .featuredpiece {
+    width: 80%;
+    margin: 10%;
+    position: relative;
+    height: 450px;
+  }
+
+  .item-1,
+  .item-2,
+  .item-3 {
+    width: 100%;
+  }
+
+  h2 {
+    margin-top: 30px;
+  }
+
+  .piecepreviewcolumn {
+    width: 100%;
+  }
+
+  .artpreviewrow {
+    float: none;
+  }
 
 }

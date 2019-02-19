@@ -1,6 +1,6 @@
 ---
 path: "/cab-fare"
-source: "./piano4.jpg"
+source: "./artimages/cabfare.jpg"
 title: "Cab Fare"
 author: "Kalia Firester"
 type: "Art"

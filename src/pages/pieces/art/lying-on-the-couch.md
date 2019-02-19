@@ -1,6 +1,6 @@
 ---
 path: "/lying-on-the-couch"
-source: "./piano4.jpg"
+source: "./artimages/lyingonthecouch.jpg"
 title: "Lying on the Couch"
 author: "Serena Eggers"
 type: "Art"

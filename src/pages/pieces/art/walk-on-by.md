@@ -1,6 +1,6 @@
 ---
 path: "/walk-on-by"
-source: "./piano2.jpg"
+source: "./artimages/walkonby.jpg"
 title: "Walk on By"
 author: "Sy Abudu"
 type: "Art"

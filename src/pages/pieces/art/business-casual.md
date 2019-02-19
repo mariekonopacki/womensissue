@@ -1,6 +1,6 @@
 ---
 path: "/business-casual"
-source: "./piano2.jpg"
+source: "./artimages/businesscasual.jpg"
 title: "Business Casual"
 author: "Genesis Belanger"
 type: "Art"

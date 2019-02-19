@@ -19,7 +19,7 @@ export default function Template({ data }) {
 
   return (
     <Layout>
-    <SEO title={post.frontmatter.title} keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title={post.frontmatter.title} />
 
     <div class="backHome">
       <a href="/">
@@ -27,27 +27,34 @@ export default function Template({ data }) {
       </a>
     </div>
     <div class="pieceBox">
-      <div class="pieceInfo">
-        <div class="title">
-          <h2>{post.frontmatter.title}</h2>
-          <small>
-              {post.frontmatter.type} by {post.frontmatter.author}
-          </small>
-        </div>
-        <div class="sharePiece">
-          <div class="shareCall">
-            <small>
-                Share this piece
-            </small>
-          </div>
-          <div class="shareButtons">
-            <img class="shareIcon" src={Twitter}></img>
-            <img class="shareIcon" src={Facebook}></img>
-            <img class="shareIcon" src={Email}></img>
+        <div class="pieceInfo">
+          <div class="stickyInfo">
+            <div class="title">
+              <h2>{post.frontmatter.title}</h2>
+              <small>
+                  {post.frontmatter.type} by {post.frontmatter.author}
+              </small>
+            </div>
+            <div class="sharePiece">
+              <div class="shareCall">
+                <small>
+                    Share this piece
+                </small>
+              </div>
+              <div class="shareButtons">
+                <a href="https://twitter.com/home?status="><img class="shareIcon" src={Twitter}></img></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u="><img class="shareIcon" src={Facebook}></img></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u="><img class="shareIcon" src={Email}></img></a>
+              </div>
           </div>
         </div>
       </div>
-      <div class="pieceWriting" dangerouslySetInnerHTML={{ __html: post.html }} />
+      <div class="pieceContent">
+        <div class="pieceArt">
+          <img src={post.frontmatter.source.childImageSharp.sizes.src} />
+        </div>
+        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      </div>
     </div>
 
 
@@ -85,6 +92,13 @@ export const postQuery = graphql`
       frontmatter {
         path
         title
+        source {
+          childImageSharp{
+            sizes(maxWidth: 630) {
+                src
+            }
+          }
+        }
         author
         type
       }
@@ -103,5 +117,6 @@ export const postQuery = graphql`
         }
       }
     }
+
   }
 `

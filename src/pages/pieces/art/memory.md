@@ -1,6 +1,6 @@
 ---
 path: "/memory"
-source: "./piano2.jpg"
+source: "./artimages/memory.jpg"
 title: "Memory"
 author: "Jeanne Jalandoni"
 type: "Art"

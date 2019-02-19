@@ -1,13 +1,13 @@
 ---
 path: "/the-magician"
-source: "./piano2.jpg"
+source: "./artimages/themagician.jpg"
 title: "The Magician"
 author: "Angela Alés"
 type: "Art"
 ---
 
 1. Could you talk a bit about the recurring symbols and icons that appear in your work and how we as viewers are to interpret them?
-My artistic process has in large part been both the means of searching for spiritual and philosophical meaning in my life as well as the act of recording this search. Throughout this journey recurring symbols and icons have solidified into my personal language. This language has been developing since an early age, and even though each symbol represents something particular for me, I do want the viewers to bring their own history and interpretation when seeing my work. 
+My artistic process has in large part been both the means of searching for spiritual and philosophical meaning in my life as well as the act of recording this search. Throughout this journey recurring symbols and icons have solidified into my personal language. This language has been developing since an early age, and even though each symbol represents something particular for me, I do want the viewers to bring their own history and interpretation when seeing my work.
 
 Here are a few symbols and what they represent to me.
 The ladders represent the search or process of growth and evolution.

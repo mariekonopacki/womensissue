@@ -1,6 +1,6 @@
 ---
 path: "/sonia-espinosa"
-source: "./piano1.jpg"
+source: "./artimages/soniaespinosa.jpg"
 title: "Sonia Espinosa"
 author: "Ali Park"
 type: "Art"

@@ -1,6 +1,6 @@
 ---
 path: "/ice"
-source: "./piano4.jpg"
+source: "./artimages/ice.jpg"
 title: "Ice"
 author: "Charlotte Edey"
 type: "Art"

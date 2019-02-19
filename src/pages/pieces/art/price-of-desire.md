@@ -1,6 +1,6 @@
 ---
 path: "/price-of-desire"
-source: "./piano2.jpg"
+source: "./artimages/thepriceofdesire.jpg"
 title: "Price of Desire"
 author: "Mattea Perrotta"
 type: "Art"

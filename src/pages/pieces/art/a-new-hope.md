@@ -1,6 +1,6 @@
 ---
 path: "/a-new-hope"
-source: "./piano2.jpg"
+source: "./artimages/anewhope.jpg"
 title: "A New Hope"
 author: "Fatima Taj"
 type: "Art"

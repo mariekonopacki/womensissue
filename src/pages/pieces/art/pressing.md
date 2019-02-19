@@ -1,6 +1,6 @@
 ---
 path: "/pressing"
-source: "./piano3.jpg"
+source: "./artimages/pressing.jpg"
 title: "Pressing"
 author: "Joy Miessi"
 type: "Art"

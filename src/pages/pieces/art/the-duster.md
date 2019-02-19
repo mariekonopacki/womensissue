@@ -1,6 +1,6 @@
 ---
 path: "/the-duster"
-source: "./piano4.jpg"
+source: "./artimages/theduster.jpg"
 title: "The Duster"
 author: "Jeanne Jalandoni"
 type: "Art"

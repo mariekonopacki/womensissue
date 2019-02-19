@@ -1,6 +1,6 @@
 ---
 path: "/dancer"
-source: "./piano3.jpg"
+source: "./artimages/dancer.jpg"
 title: "Dancer"
 author: "Hanna Barczyk"
 type: "Art"

@@ -58,6 +58,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     res.data.art.edges.forEach(({ node }) => {
       createPage({
         path: node.frontmatter.path,
+        source: node.frontmatter.source,
         component: artTemplate,
       })
     })

@@ -1,6 +1,6 @@
 ---
 path: "/dysphoria"
-source: "./piano3.jpg"
+source: "./artimages/dysphoria.jpg"
 title: "Dysphoria"
 author: "Samsoun"
 type: "Art"

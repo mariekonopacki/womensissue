@@ -1,6 +1,6 @@
 ---
 path: "/milk-chocolate"
-source: "./piano2.jpg"
+source: "./artimages/milkchocolate.jpg"
 title: "Milk Chocolate"
 author: "Tshabalala Self"
 type: "Art"
