@@ -14,9 +14,9 @@ import Twitter from '../images/twitter.png'
 export default function Template({ data }) {
   const post = data.markdownRemark
   const recommendedSample = _.sampleSize(data.all.edges, 3)
-  const facebookLink = "https://www.facebook.com/sharer/sharer.php?u=" + window.location
-  const twitterLink = "https://twitter.com/home?status=" + window.location
-  const emailLink = "mailto:?&subject=Read " + post.frontmatter.title + " from the Women's Issue" + "&body=" + window.location
+  const facebookLink = "https://www.facebook.com/sharer/sharer.php?u="
+  const twitterLink = "https://twitter.com/home?status="
+  const emailLink = "mailto:?&subject=Read " + post.frontmatter.title + " from the Women's Issue" + "&body=" 
 
   console.log(facebookLink)
   console.log(emailLink)
