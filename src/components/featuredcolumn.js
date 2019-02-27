@@ -7,7 +7,6 @@ const Featuredcolumn = styled.div`
 
 `
 
-
 export default ({ children }) => (
   <div class="columnOutline">
     <div class="featuredColumn">

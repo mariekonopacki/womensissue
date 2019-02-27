@@ -42,6 +42,19 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           }
         }
       }
+      interviews: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/interviews/"}}) {
+        edges {
+          node {
+            id
+            frontmatter {
+              path
+              title
+              author
+              type
+            }
+          }
+        }
+      }
     }
   `).then(res => {
     if (res.errors) {
@@ -60,6 +73,14 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         path: node.frontmatter.path,
         source: node.frontmatter.source,
         component: artTemplate,
+      })
+    })
+
+    res.data.interviews.edges.forEach(({ node }) => {
+      createPage({
+        path: node.frontmatter.path,
+        source: node.frontmatter.source,
+        component: postTemplate,
       })
     })
   })

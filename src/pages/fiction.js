@@ -1,11 +1,13 @@
 import React from 'react'
 
+import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import Piecepreviewrow from '../components/piecepreviewrow'
 import Piecepreview from '../components/piecepreview'
 import Circlebutton from '../components/circlebutton'
 import Shorten from '../components/shorten'
 import SEO from '../components/seo'
+import Navbar from '../components/navbar'
 
 
 export default ({data }) => {
@@ -13,6 +15,16 @@ export default ({data }) => {
 return (
   <Layout>
     <SEO title="Fiction" keywords={[`fiction`]} />
+
+    <Navbar></Navbar>
+    <ul class="genreBar">
+      <li class="genre"><Link to="/" activeClassName="active">All</Link></li>
+      <li class="genre"><Link to="/art" activeClassName="active">Art</Link></li>
+      <li class="genre"><Link to="/fiction" activeClassName="active">Fiction</Link></li>
+      <li class="genre"><Link to="/personalessay" activeClassName="active">Personal Essays</Link></li>
+      <li class="genre"><Link to="/poetry" activeClassName="active">Poetry</Link></li>
+      <li class="genre"><Link to="/interview" activeClassName="active">Interviews</Link></li>
+    </ul>
 
     <h4>Explore fiction</h4>
     <Piecepreviewrow>

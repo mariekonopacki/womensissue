@@ -1,6 +1,7 @@
 import React from 'react'
 import _ from 'lodash'
 
+import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import Piecepreviewrow from '../components/piecepreviewrow'
 import Artpreviewinfo from '../components/artpreviewrow'
@@ -13,6 +14,8 @@ import Shortenfeatured from '../components/shortenfeatured'
 import SEO from '../components/seo'
 import Featuredpiece from '../components/featuredpiece'
 import Img from 'gatsby-image'
+import Helmet from 'react-helmet'
+import Navbar from '../components/navbar'
 
 
 export default ({data }) => {
@@ -22,6 +25,17 @@ export default ({data }) => {
   return (
     <Layout>
       <SEO title="Home" keywords={[`literary`, `art`, `magazine`]} />
+
+      <Navbar></Navbar>
+      
+      <ul class="genreBar">
+        <li class="genre"><Link to="/" activeClassName="active">All</Link></li>
+        <li class="genre"><Link to="/art" activeClassName="active">Art</Link></li>
+        <li class="genre"><Link to="/fiction" activeClassName="active">Fiction</Link></li>
+        <li class="genre"><Link to="/personalessay" activeClassName="active">Personal Essays</Link></li>
+        <li class="genre"><Link to="/poetry" activeClassName="active">Poetry</Link></li>
+        <li class="genre"><Link to="/interview" activeClassName="active">Interviews</Link></li>
+      </ul>
 
       <h4>Featured</h4>
       <div class="featuredrow">
@@ -132,7 +146,7 @@ export default ({data }) => {
           </div>
 
           <div class="rightmostArt">
-            <Artpiece>
+            <div class="artpiece">
               <div class="artitem-1">
                 <a href={artSample[0].node.frontmatter.path}>
                   <div class="artDisplay"><img src={artSample[0].node.frontmatter.source.childImageSharp.sizes.src} /></div>
@@ -153,7 +167,7 @@ export default ({data }) => {
                   <div class="artDisplay"><img src={artSample[3].node.frontmatter.source.childImageSharp.sizes.src} /></div>
                 </a>
               </div>
-            </Artpiece>
+            </div>
           </div>
     </div>
     <a href="/art"><h4 class="seemore">See more art</h4></a>
@@ -207,10 +221,12 @@ export default ({data }) => {
         ))}
         <a href="/poetry"><h4 class="seemore">See more poetry</h4></a>
       </Piecepreviewrow>
-
     </Layout>
+
   )
 }
+
+
 
 const path = require(`path`)
 

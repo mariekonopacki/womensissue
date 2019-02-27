@@ -24,14 +24,13 @@ const Layout = ({ children }) => (
           background: `white`,
           maxWidth: 1300,
           padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: `100px`,
+          paddingTop: `40px`,
           boxShadow: `0px 0px 5px rgba(0, 0, 0, 0.3)`
         }}
         >
         <div
           style={{
             margin: `0 auto`,
-            paddingTop: `60px`,
             maxWidth: 960,
           }}
         >

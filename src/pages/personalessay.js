@@ -1,11 +1,13 @@
 import React from 'react'
 
+import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import Piecepreviewrow from '../components/piecepreviewrow'
 import Piecepreview from '../components/piecepreview'
 import Circlebutton from '../components/circlebutton'
 import Shorten from '../components/shorten'
 import SEO from '../components/seo'
+import Navbar from '../components/navbar'
 
 
 export default ({data }) => {
@@ -14,12 +16,22 @@ return (
   <Layout>
     <SEO title="Personal Essay" keywords={[`personalessay`, `personal`, `essay`]} />
 
-    <h4>Explore Personal Essays</h4>
+    <Navbar></Navbar>
+    <ul class="genreBar">
+      <li class="genre"><Link to="/" activeClassName="active">All</Link></li>
+      <li class="genre"><Link to="/art" activeClassName="active">Art</Link></li>
+      <li class="genre"><Link to="/fiction" activeClassName="active">Fiction</Link></li>
+      <li class="genre"><Link to="/personalessay" activeClassName="active">Personal Essays</Link></li>
+      <li class="genre"><Link to="/poetry" activeClassName="active">Poetry</Link></li>
+      <li class="genre"><Link to="/podcasts" activeClassName="active">Interviews</Link></li>
+    </ul>
+
+    <h4>Explore personal essays</h4>
     <Piecepreviewrow>
       {data.personalessay.edges.map(post => (
         <a href={post.node.frontmatter.path}>
         <div class="piecepreviewcolumn">
-          <div class="piecepreview essaypreview">        
+          <div class="piecepreview essaypreview">
             <div key={post.node.id}>
               <h3>{post.node.frontmatter.title}</h3>
               <small>

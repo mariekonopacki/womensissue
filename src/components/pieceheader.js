@@ -18,7 +18,7 @@ const PieceHeader = ({ siteTitle }) => (
         <li class="stickyLink"><Link to="/" activeClassName="activeSub">Home</Link></li>
         <li class="stickyLink"><Link to="/" activeClassName="activeSub">Browse  ⌄</Link></li>
         <li class="stickyLink"><Link to="/about" activeClassName="activeSub">About</Link></li>
-        <li class="stickyLink"><Link to="/donate" activeClassName="activeSub">Donate</Link></li>
+        <li class="stickyLink donate"><Link to="/donate" activeClassName="activeSub">Donate</Link></li>
       </ul>
 
 
