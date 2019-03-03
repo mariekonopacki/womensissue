@@ -3,85 +3,89 @@ path: "/seagull-tiny"
 title: "Seagull, Tiny"
 author: "Jos Charles"
 type: "Poetry"
+source: "../../icons/3.jpg"
+interview: "/jos-charles" 
+
+
 ---
 
-The villagers are
+the villagers are<br />
 watchful
 
-in their booths at
+in their booths at<br />
 boston market
 
-The boys living on
+the boys living on<br />
 sulfur
 
-and talking about
+and talking about<br />
 feelings
 
-and memory  The
+and memory  the<br />
 united states
 
-is the collective
+is the collective<br />
 process of
 
-demanding feelings
+demanding feelings<br />
 and a certain
 
-memory  I would live
+memory  i would live<br />
 on synthetics
 
-but i hate fragility
+but i hate fragility<br />
 Lonely and afraid,
 
-my women sing, there
+my women sing, there<br />
 is no father
 
-in me  They talk about
+in me  they talk about<br />
 anything
 
-a limit allows  There
+a limit allows  there<br />
 is hope
 
-of forgiveness, but
+of forgiveness, but<br />
 my american
 
-corpse has been such
+corpse has been such<br />
 a disappointment
 
-I would live on
+i would live on<br />
 feeling  safe
 
-and  spilling  secrets
-It is confusing
+and  spilling  secrets<br />
+it is confusing
 
-the plain people
+the plain people<br />
 passing
 
-like potato blossoms
-When i first
+like potato blossoms<br />
+when i first
 
-met a trans person at
+met a trans person at<br />
 age 7
 
-she served us mashed
+she served us mashed<br />
 potatoes
 
-at boston market
-Mother winced
+at boston market<br />
+mother winced
 
-and statistically it’s
+and statistically it’s<br />
 unlikely she
 
-kept the job
-I am worthy
+kept the job<br />
+i am worthy
 
-of eating food i tell
-myself  There
+of eating food i tell<br />
+myself  there
 
-is some hope of
+is some hope of<br />
 forgiveness
 
-for boys  I would live
+for boys  i would live<br />
 on their plastic
 
-It is confusing that
+it is confusing that
 words trick us

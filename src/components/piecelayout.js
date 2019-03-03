@@ -19,11 +19,11 @@ const PieceLayout = ({ children }) => (
     render={data => (
       <>
         <PieceHeader siteTitle={data.site.siteMetadata.title} />
-        <div style={{
+        <div class="whitelayout" style={{
           margin: `0 auto`,
           background: `white`,
-          maxWidth: 1300,
-          marginTop: `150px`,
+          maxWidth: `97%`,
+          marginTop: `100px`,
           padding: `0px 1.0875rem 1.45rem`,
           boxShadow: `0px 0px 5px rgba(0, 0, 0, 0.3)`
         }}

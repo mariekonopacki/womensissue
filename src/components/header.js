@@ -10,7 +10,7 @@ const Header = ({ siteTitle }) => (
       marginTop: `80px`
     }}
   >
-  <img src={Cover} alt="Cover"
+  <img href="/" src={Cover} alt="Cover"
     style={{
       zIndex: `3`
     }}

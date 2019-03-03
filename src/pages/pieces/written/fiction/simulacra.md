@@ -3,6 +3,9 @@ path: "/simulacra"
 title: "Simulacra"
 author: "Disha Trivedi"
 type: "Fiction"
+source: "../../icons/6.jpg"
+interview: "No"
+
 ---
 
 There is an artist in a loft that should have been gutted a long time ago. It is in the city’s aching heart, but nothing about it resembles the steel-and-stuccoed world outside. The ceiling exposes every pipe. Paint comes off the walls in golden curls, revealing a pigeon-colored undertone. Sunlight takes a different slant inside, slashing across a pantone print on one wall and a faded tapestry on another. Old and new sing together and rattle in the steam that runs through the pipes.

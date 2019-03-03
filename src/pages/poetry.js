@@ -3,7 +3,6 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import Piecepreviewrow from '../components/piecepreviewrow'
-import Piecepreview from '../components/piecepreview'
 import Circlebutton from '../components/circlebutton'
 import Shorten from '../components/shorten'
 import SEO from '../components/seo'
@@ -27,13 +26,13 @@ return (
       <li class="genre"><Link to="/interview" activeClassName="active">Interviews</Link></li>
     </ul>
 
-    <h4>Explore poetry</h4>
+    <h4 class="top">Explore poetry</h4>
     <Piecepreviewrow>
       {data.poetry.edges.map(post => (
         <a href={post.node.frontmatter.path}>
         <div class="piecepreviewcolumn">
           <div class="piecepreview poetrypreview">
-            <div key={post.node.id}>
+            <div class="previewContent" key={post.node.id}>
               <h3>{post.node.frontmatter.title}</h3>
               <small>
                 {post.node.frontmatter.type} by {post.node.frontmatter.author}

@@ -4,17 +4,11 @@ import _ from 'lodash'
 import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import Piecepreviewrow from '../components/piecepreviewrow'
-import Artpreviewinfo from '../components/artpreviewrow'
-import Artpiece from '../components/artpiece'
 import Circlebutton from '../components/circlebutton'
-import Featuredrow from '../components/featuredrow'
 import Featuredcolumn from '../components/featuredcolumn'
 import Shorten from '../components/shorten'
 import Shortenfeatured from '../components/shortenfeatured'
 import SEO from '../components/seo'
-import Featuredpiece from '../components/featuredpiece'
-import Img from 'gatsby-image'
-import Helmet from 'react-helmet'
 import Navbar from '../components/navbar'
 
 
@@ -27,7 +21,7 @@ export default ({data }) => {
       <SEO title="Home" keywords={[`literary`, `art`, `magazine`]} />
 
       <Navbar></Navbar>
-      
+
       <ul class="genreBar">
         <li class="genre"><Link to="/" activeClassName="active">All</Link></li>
         <li class="genre"><Link to="/art" activeClassName="active">Art</Link></li>
@@ -37,7 +31,7 @@ export default ({data }) => {
         <li class="genre"><Link to="/interview" activeClassName="active">Interviews</Link></li>
       </ul>
 
-      <h4>Featured</h4>
+      <h4 class="top">Featured</h4>
       <div class="featuredrow">
         {featuredSample.map(post => (
           <Featuredcolumn>
@@ -58,7 +52,7 @@ export default ({data }) => {
       <div class="featuredpiece">
           <div class="item-1" href={featuredSample[0].node.frontmatter.path}>
             <a class="featuredLink" href={featuredSample[0].node.frontmatter.path}>
-              <div class="featuredImage"></div>
+            <img class="featuredImage" alt="first feature" src={featuredSample[0].node.frontmatter.source.childImageSharp.sizes.src}></img>
               <div class="featuredInfo">
                 <h2>{featuredSample[0].node.frontmatter.title}</h2>
                 <small>
@@ -72,28 +66,28 @@ export default ({data }) => {
           </div>
           <div class="item-2">
             <a class="featuredLink" href={featuredSample[1].node.frontmatter.path}>
-              <div class="featuredImage"></div>
+              <img class="featuredImage" alt="second feature" src={featuredSample[1].node.frontmatter.source.childImageSharp.sizes.src}></img>
               <div class="featuredInfo">
                 <h2>{featuredSample[1].node.frontmatter.title}</h2>
                 <small>
                   {featuredSample[1].node.frontmatter.type} by {featuredSample[1].node.frontmatter.author}
                 </small>
                 <Shortenfeatured>
-                  {featuredSample[0].node.excerpt}
+                  {featuredSample[1].node.excerpt}
                 </Shortenfeatured>
               </div>
             </a>
           </div>
           <div class="item-3">
             <a class="featuredLink" href={featuredSample[2].node.frontmatter.path}>
-              <div class="featuredImage"></div>
+            <img class="featuredImage" alt="third feature" src={featuredSample[2].node.frontmatter.source.childImageSharp.sizes.src}></img>
               <div class="featuredInfo">
                 <h2>{featuredSample[2].node.frontmatter.title}</h2>
                 <small>
                   {featuredSample[2].node.frontmatter.type} by {featuredSample[2].node.frontmatter.author}
                 </small>
                 <Shortenfeatured>
-                  {featuredSample[0].node.excerpt}
+                  {featuredSample[2].node.excerpt}
                 </Shortenfeatured>
               </div>
             </a>
@@ -149,22 +143,22 @@ export default ({data }) => {
             <div class="artpiece">
               <div class="artitem-1">
                 <a href={artSample[0].node.frontmatter.path}>
-                  <div class="artDisplay"><img src={artSample[0].node.frontmatter.source.childImageSharp.sizes.src} /></div>
+                  <div class="artDisplay"><img alt={artSample[0].node.frontmatter.title} src={artSample[0].node.frontmatter.source.childImageSharp.sizes.src} /></div>
                 </a>
               </div>
               <div class="artitem-2">
                 <a href={artSample[1].node.frontmatter.path}>
-                  <div class="artDisplay"><img src={artSample[1].node.frontmatter.source.childImageSharp.sizes.src} /></div>
+                  <div class="artDisplay"><img alt={artSample[1].node.frontmatter.title} src={artSample[1].node.frontmatter.source.childImageSharp.sizes.src} /></div>
                 </a>
               </div>
               <div class="artitem-3">
                 <a href={artSample[2].node.frontmatter.path}>
-                  <div class="artDisplay"><img src={artSample[2].node.frontmatter.source.childImageSharp.sizes.src} /></div>
+                  <div class="artDisplay"><img alt={artSample[2].node.frontmatter.title} src={artSample[2].node.frontmatter.source.childImageSharp.sizes.src} /></div>
                 </a>
               </div>
               <div class="artitem-4">
                 <a href={artSample[3].node.frontmatter.path}>
-                  <div class="artDisplay"><img src={artSample[3].node.frontmatter.source.childImageSharp.sizes.src} /></div>
+                  <div class="artDisplay"><img alt={artSample[3].node.frontmatter.title} src={artSample[3].node.frontmatter.source.childImageSharp.sizes.src} /></div>
                 </a>
               </div>
             </div>
@@ -228,8 +222,6 @@ export default ({data }) => {
 
 
 
-const path = require(`path`)
-
 
 export const pieceQuery = graphql`
     query PieceIndexQuery {
@@ -242,6 +234,13 @@ export const pieceQuery = graphql`
               title
               author
               type
+              source {
+                childImageSharp{
+                  sizes(maxWidth: 630) {
+                      src
+                  }
+                }
+              }
             }
             excerpt(pruneLength: 350)
           }
@@ -256,6 +255,13 @@ export const pieceQuery = graphql`
               title
               author
               type
+              source {
+                childImageSharp{
+                  sizes(maxWidth: 630) {
+                      src
+                  }
+                }
+              }
             }
             excerpt
           }

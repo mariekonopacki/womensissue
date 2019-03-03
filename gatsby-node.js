@@ -5,6 +5,8 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 
   const postTemplate = path.resolve('src/templates/writtenpiece.js')
   const artTemplate = path.resolve('src/templates/artpiece.js')
+  const interviewTemplate = path.resolve('src/templates/interviewpiece.js')
+
 
   return graphql(`
     {
@@ -17,6 +19,13 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
               title
               author
               type
+              source {
+                childImageSharp{
+                  sizes(maxWidth: 630) {
+                      src
+                  }
+                }
+              }
             }
             excerpt
           }
@@ -28,6 +37,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             id
             frontmatter {
               path
+              video
               source {
                 childImageSharp{
                   sizes(maxWidth: 630) {
@@ -51,6 +61,14 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
               title
               author
               type
+              sound
+              source {
+                childImageSharp{
+                  sizes(maxWidth: 630) {
+                      src
+                  }
+                }
+              }
             }
           }
         }
@@ -64,6 +82,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     res.data.written.edges.forEach(({ node }) => {
       createPage({
         path: node.frontmatter.path,
+        source: node.frontmatter.source,
         component: postTemplate,
       })
     })
@@ -72,6 +91,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       createPage({
         path: node.frontmatter.path,
         source: node.frontmatter.source,
+        video: node.frontmatter.video,
         component: artTemplate,
       })
     })
@@ -80,7 +100,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       createPage({
         path: node.frontmatter.path,
         source: node.frontmatter.source,
-        component: postTemplate,
+        component: interviewTemplate,
       })
     })
   })

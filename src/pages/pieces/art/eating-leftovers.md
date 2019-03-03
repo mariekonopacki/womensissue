@@ -1,7 +1,11 @@
 ---
 path: "/eating-leftovers"
-source: "./piano2.jpg"
+video: "https://www.youtube.com/embed/bHL20Pll8Rs"
+source: "./artimages/eatingleftovers.png"
 title: "Eating Leftovers"
 author: "Sabrina Wu"
-type: "Art"
+type: "Video"
+interview: "No"
 ---
+
+Video animation

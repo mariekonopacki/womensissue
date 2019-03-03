@@ -1,29 +1,29 @@
 import _ from 'lodash'
 import React from 'react'
-import Link from 'gatsby-link'
 import Layout from '../components/piecelayout'
 import Piecepreviewrow from '../components/piecepreviewrow'
-import Piecepreview from '../components/piecepreview'
 import Shorten from '../components/shorten'
 import Circlebutton from '../components/circlebutton'
 import SEO from '../components/seo'
 import Email from '../images/email.png'
 import Facebook from '../images/facebook.png'
 import Twitter from '../images/twitter.png'
+import Sound from '../images/sound.png'
+
+import { Location } from '@reach/router';
+import Navbar from '../components/navbar'
+
 
 export default function Template({ data }) {
   const post = data.markdownRemark
   const recommendedSample = _.sampleSize(data.all.edges, 3)
-  const facebookLink = "https://www.facebook.com/sharer/sharer.php?u="
-  const twitterLink = "https://twitter.com/home?status="
-  const emailLink = "mailto:?&subject=Read " + post.frontmatter.title + " from the Women's Issue" + "&body="
 
-  console.log(facebookLink)
-  console.log(emailLink)
 
   return (
     <Layout>
     <SEO title={post.frontmatter.title} />
+
+    <Navbar></Navbar>
 
     <div class="backHome">
       <a href="/">
@@ -40,7 +40,7 @@ export default function Template({ data }) {
                 {post.frontmatter.type} by {post.frontmatter.author}
             </small>
           </div>
-          <div class="pieceIcon"></div>
+          <img class="pieceIcon" alt="piece icon" src={post.frontmatter.source.childImageSharp.sizes.src}></img>
           <div class="sharePiece">
             <div class="shareCall">
               <small>
@@ -48,11 +48,26 @@ export default function Template({ data }) {
               </small>
             </div>
             <div class="shareButtons">
-              <a href="https://twitter.com/home?status="><img class="shareIcon" src={Twitter}></img></a>
-              <a href="https://www.facebook.com/sharer/sharer.php?u="><img class="shareIcon" src={Facebook}></img></a>
-              <a href="https://www.facebook.com/sharer/sharer.php?u="><img class="shareIcon" src={Email}></img></a>
+              <Location>
+                {({ location }) => {
+                  return <div><a href={'https://twitter.com/home?status=womens.theharvardadvocate.com' + location.pathname}><img alt="twitter logo" class="shareIcon" src={Twitter}></img></a>
+                          <a href={'https://www.facebook.com/sharer/sharer.php?u=womens.theharvardadvocate.com' + location.pathname}><img alt="facebook logo" class="shareIcon" src={Facebook}></img></a>
+                          <a href={"mailto:?&subject=Read " + post.frontmatter.title + "from the Women's Issue&body=womens.theharvardadvocate.com" + location.pathname}><img alt="email logo"class="shareIcon" src={Email}></img></a></div>
+                }}
+              </Location>
             </div>
           </div>
+          <a class="interview" href={
+            post.frontmatter.interview === 'No'
+             ? ''
+             : post.frontmatter.interview
+          } style={{display: post.frontmatter.interview === 'No' ? 'none' : 'flex' }}>
+            <img alt="share icon" class="shareIcon" src={Sound}></img>
+            <small>{post.frontmatter.interview === 'No'
+             ? ''
+             : 'Read/listen to the artist\'s interview here'}
+            </small>
+          </a>
         </div>
       </div>
       <div class="pieceWriting" dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -97,6 +112,14 @@ export const postQuery = graphql`
         title
         author
         type
+        interview
+        source {
+          childImageSharp{
+            sizes(maxWidth: 630) {
+                src
+            }
+          }
+        }
       }
     }
     all: allMarkdownRemark {

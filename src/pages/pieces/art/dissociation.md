@@ -1,7 +1,12 @@
 ---
 path: "/dissociation"
-source: "./piano4.jpg"
+video: "https://www.youtube.com/embed/m06FLYLBz3g"
+source: "./artimages/dissociation.jpg"
 title: "Dissociation"
 author: "Nicole Araya"
-type: "Art"
+type: "Video"
+interview: "No"
+
 ---
+
+Video animation

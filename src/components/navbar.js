@@ -1,17 +1,22 @@
 import React from "react"
-import styled from "styled-components"
 import { Link } from 'gatsby'
 import Logo from '../images/logo.png'
+import SmallLogo from '../images/smalllogo.png'
+
 
 
 export default ({ children }) => (
   <div class="stickyHeaderHome">
     <a href="/"><div class="logo">
-      <img src={Logo}></img>
+      <img src={Logo} alt="logo"></img>
+    </div></a>
+
+    <a href="/"><div class="logomobile">
+      <img src={SmallLogo} alt="small logo"></img>
     </div></a>
 
     <ul class="navLinksStickyHeader">
-      <li class="stickyLink"><Link to="/" activeClassName="activeSub">Home</Link></li>
+      <li class="stickyLink home"><Link to="/" activeClassName="activeSub">Home</Link></li>
       <li class="dropdown">
         <div class="stickyLink"><Link to="/" activeClassName="activeSub">Browse  ⌄</Link></div>
         <div class="dropdown-set">

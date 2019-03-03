@@ -3,6 +3,9 @@ path: "/rosemary"
 title: "Rosemary"
 author: "Jacqueline He"
 type: "Personal Essay"
+source: "../../icons/12.jpg"
+interview: "No"
+
 ---
 All summer long, we played checkers out on your front porch. The discs clinked under our fingertips, which shone with grease from the potato chips we licked but would not eat. This was our habit: to pop a chip under our tongues and lave the brittle flake, swallowing only the aftertaste of salt and sour cream. Earlier, you had dumped sugar-free lemonade mix into a water gallon, shook it until the water bloomed to a cloudy yellow. Your fingers skittered along the grid-patterned board, jumping over the squares and scooping up each black checker of mine, your spoils of war. You always played white. You played to win.
 
@@ -13,7 +16,9 @@ Everything moved slowly, like a dream. In the distance, we could see Angel, the 
 “Pour it yourself.” You feigned coolness and gestured toward the Dixie cups by your elbow. But the boy unscrewed the red cap instead and tilted the container upward, no contact. His wrist moved until the cold sweet liquid tipped down his throat. Autumn sun edged the dark line of his almost-feminine lashes, tracked the line of his nose.
 
 “That’s some good lemonade,” Angel said, nudging the empty bottle back. “What’s it made of?” “Just Country Time mix. And water,” I said.
+
 “Oh.”
+
 “Want more?”
 
 “If you still have any.”
@@ -55,7 +60,9 @@ We climbed the back stairs to the employee’s break room. Mannequin heads ringe
 “What are they?” You poked at the brown crust with your pinkie nail, then raised your eyebrows at his glance of incredulity.
 
 “Mooncakes from home. Never had one?”
+
 You snorted. “I don’t deal with that culture shit.”
+
 And I can’t explain how he looked at you afterwards, this Chinese boy’s little bewildered
 
 disappointment towards a Chinese-American girl, but he tore open the packet with the two-pronged forks and said, “Oh, try it anyway.”
@@ -85,9 +92,13 @@ Angel squinted at the lettering. “Some model for skin whitening cream.” He t
 I was appalled. “That’s racist.” A few women by the eyeliner section swiveled at my voice, the blue of their veins winking under the incandescent glare.
 
 “It’s a cultural thing.”
+
 “’Light is beautiful?’ Why would they even say that?”
+
 “It’s just a makeup ad. Jesus.” He’s moved to shift the pages away.
+
 “But isn’t it wro-”
+
 “Oh, my god. Don’t be so weird.” You had returned with two diet orange sodas. “It’s just cream.
 
 Nothing more harmless than cream.” Popping open the metal tab, you took a long gulp, condensation inching down your wrists. “Don’t mind her,” you said to Angel. “She’s such a baby. She doesn’t know much at all.”

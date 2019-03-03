@@ -3,9 +3,12 @@ path: "/all-the-places-ive-slept"
 title: "All the Places I've Slept in the Past Seventeen Months"
 author: "Alyssa Britton"
 type: "Personal Essay"
+source: "../../icons/10.jpg"
+interview: "No" 
+
 ---
 
-My parents buy me a new twin mattress when I am too old for my toddler’s bed with the guard rail but too young to remember my actual age, and, growing up eating stale bread when it was what we had, that is the bed I sleep on until the morning I fly across the country to attempt to take up space somewhere else.
+My parents buy me a new twin mattress when I am too old for my toddler’s bed with the guard rail but too young to remember my actual age, and, growing up eating stale bread when it was what we had, that is the bed I sleep on until the morning I fly across the country to attempt to take up space somewhere else.  
 
 My roommates grow up differently than me, less stale bread and divorce, more family vacation photos. They learn different love languages than me - not paying the bills but asking are you okay. Intimacy is a language I have not yet learned, a language taught by soft conversations and gentle hands absently stroking the ends of my hair. Sleep catches me slumped onto their
 shoulders on the train.
