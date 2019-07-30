@@ -9,7 +9,7 @@ import Email from '../images/email.png'
 import Facebook from '../images/facebook.png'
 import Twitter from '../images/twitter.png'
 import { Location } from '@reach/router';
-import Navbar from '../components/navbar'
+import Navbar from '../components/sidenav'
 
 
 export default function Template({ data }) {

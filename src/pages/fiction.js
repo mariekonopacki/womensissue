@@ -6,7 +6,7 @@ import Piecepreviewrow from '../components/piecepreviewrow'
 import Circlebutton from '../components/circlebutton'
 import Shorten from '../components/shorten'
 import SEO from '../components/seo'
-import Navbar from '../components/navbar'
+import Navbar from '../components/sidenav'
 
 
 export default ({data }) => {

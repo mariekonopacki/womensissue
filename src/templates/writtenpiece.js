@@ -11,7 +11,7 @@ import Twitter from '../images/twitter.png'
 import Sound from '../images/sound.png'
 
 import { Location } from '@reach/router';
-import Navbar from '../components/navbar'
+import Navbar from '../components/sidenav'
 
 
 export default function Template({ data }) {

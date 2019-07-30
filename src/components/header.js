@@ -6,8 +6,7 @@ import Cover from '../images/cover.png'
 const Header = ({ siteTitle }) => (
   <div
     style={{
-      marginBottom: `-3.5em`,
-      marginTop: `80px`
+      marginBottom: `-3.5em`
     }}
   >
   <img href="/" src={Cover} alt="Cover"

@@ -15,6 +15,7 @@ export default ({ children }) => (
       <img src={SmallLogo} alt="small logo"></img>
     </div></a>
 
+
     <ul class="navLinksStickyHeader">
       <li class="stickyLink home"><Link to="/" activeClassName="activeSub">Home</Link></li>
       <li class="dropdown">
