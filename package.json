@@ -8,7 +8,7 @@
     "babel-plugin-styled-components": "^1.10.0",
     "bootstrap": "^4.2.1",
     "cheeseburger-menu": "0.0.13",
-    "gatsby": "^2.0.76",
+    "gatsby": "^2.32.13",
     "gatsby-image": "^2.0.26",
     "gatsby-plugin-catch-links": "^2.0.9",
     "gatsby-plugin-lodash": "^3.0.3",
